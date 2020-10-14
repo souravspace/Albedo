@@ -1,0 +1,34 @@
+
+##Angle  setting
+#---------------------------------
+/gun/zenith {zenangle}
+
+
+#Histogram setting
+#---------------------------------------------
+/control/subtract phdiff_hist {maxph_hist} {minph_hist}
+/control/divide   nphbin_hist {phdiff_hist} {intervalph_hist}
+
+/run/numphbin {nphbin_hist}
+/run/maxphbin {maxph_hist}
+/run/minphbin {minph_hist}
+
+
+
+
+
+## Histogram id (first_part)
+#-------------------------------------
+#/control/subtract angdiff {zenangle} {startangle}
+#/control/divide   vala_int {angdiff} {interval_ang}
+#/control/divide   vala_init {startangle} {interval_ang}
+#/control/add  vala  {vala_init} {vala_int}
+/run/histid1 {zenangle}
+
+
+
+
+
+/control/loop vis.mac indx_energy {minph_indx} {maxph_indx} {intervalph_indx}
+
+

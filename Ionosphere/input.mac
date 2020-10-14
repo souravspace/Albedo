@@ -1,0 +1,34 @@
+
+
+##Angle initialization
+#--------------------------------
+/control/alias startangle 112
+/control/alias finalangle 112
+/control/alias interval_ang 10
+
+
+##Photon Energy initialization
+#---------------------------
+/control/alias minph_indx 0
+/control/alias maxph_indx 10
+/control/alias intervalph_indx 1
+
+
+
+
+##Histogram initialization
+#----------------------------
+/control/alias minph_hist 1
+/control/alias maxph_hist 10000
+/control/alias intervalph_hist 1
+#----------------------------
+
+
+
+
+
+/control/alias nphoton 100
+
+/control/loop run1.mac zenangle {startangle} {finalangle} {interval_ang}
+
+

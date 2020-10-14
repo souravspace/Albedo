@@ -1,0 +1,17 @@
+
+STEPS:
+
+1. Put the folder "ION" somewhere and cd into it.
+
+2. Open compile.sh and change the 
+   -DGeant4_DIR=/home/souravspace/Install/GEANT4/geant4/geant4.10.05-install/lib/Geant4-10.5.1 
+   to
+   -DGeant4_DIR= your geant4 installation library path
+
+3. Run the following command 
+
+   ./compile.sh; mpic++ -o gps_gen Gps_GEN.cc; mpirun -n 4 gps_gen
+
+   (In the command the number of cpu core can be changed from 4 to any suitable number)
+
+    
